@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -243,19 +244,30 @@ button .fas {
 }
 
 /* Messages */
-#greeting {
+#message {
   font-weight: 500;
   font-size: 18px;
   padding: 16px 20px;
   border-radius: 8px;
-  color: #333;
+  color: #475569;
   margin-bottom: 15px;
   display: none;
 }
 
+#message.water {
+  background-color: #e8f7fc;
+}
+
+#message.zero {
+  background-color: #ecfdf3;
+}
+
+#message.power {
+  background-color: #fff7ed;
+}
+
 .success-message {
-  background-color: #e8f4fc;
-  color: #003c71;
+  color: #d1dce0;
 }
 
 /* Counter */
@@ -348,6 +360,86 @@ select {
   color: #475569;
 }
 
+.members-title {
+  margin-top: 30px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.member-card {
+  min-height: 120px;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.member-card.water {
+  background-color: #e8f7fc;
+}
+
+.member-card.zero {
+  background-color: #ecfdf3;
+}
+
+.member-card.power {
+  background-color: #fff7ed;
+}
+
+.member-card h4 {
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+.member-card ul {
+  padding-left: 20px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 8px;
+}
+
+.member-card li {
+  margin-bottom: 4px;
+}
+
+/* Goal reached message */
+#goalReachedMessage {
+  display: none;
+  padding: 16px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #fff7ed;
+  color: #9a3412;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.confetti {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 9px;
+  height: 15px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    top: 105vh;
+    transform: rotate(720deg);
+  }
+}
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -379,6 +471,10 @@ select {
   }
 
   .teams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .members-grid {
     grid-template-columns: 1fr;
   }
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,8 +35,12 @@
       </div>
     </div>
     <div class="container">
-      <!-- Feedback message -->
-      <p id="greeting"></p>
+      <!-- attendence goal reached message -->
+      <p id="goalReachedMessage"></p>
+      <div id="confetti" class="confetti" aria-hidden="true"></div>
+
+      <!-- Welcome message -->
+      <p id="message"></p>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -78,6 +82,21 @@
           <div class="team-card power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+          </div>
+        </div>
+        <h3 class="members-title">Team Members</h3>
+        <div class="members-grid">
+          <div class="member-card water">
+            <h4>🌊 Team Water Wise</h4>
+            <ul id="waterAttendeeList"></ul>
+          </div>
+          <div class="member-card zero">
+            <h4>🌿 Team Net Zero</h4>
+            <ul id="zeroAttendeeList"></ul>
+          </div>
+          <div class="member-card power">
+            <h4>⚡ Team Renewables</h4>
+            <ul id="powerAttendeeList"></ul>
           </div>
         </div>
       </div>
